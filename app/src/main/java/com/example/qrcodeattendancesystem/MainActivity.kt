@@ -57,6 +57,13 @@ fun MainScreen() {
     }
 }
 
+@Composable
+fun MyButton(modifier: Modifier = Modifier, text: String = "Button", onClick: () -> Unit = {}) {
+    Button(onClick = onClick, modifier = modifier) {
+        Text(text = text.uppercase())
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
